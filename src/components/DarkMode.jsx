@@ -20,5 +20,5 @@ export default function DarkMode() {
     }
   }, [isDarkMode]);
 
-  return <div className="text-3xl">{isDarkMode ? <MdDarkMode className="text-white" onClick={toggleDarkMode} /> : <MdLightMode onClick={toggleDarkMode} />}</div>;
+  return <div className="text-3xl">{isDarkMode ? <MdDarkMode className="text-dark" onClick={toggleDarkMode} /> : <MdLightMode className="text-light" onClick={toggleDarkMode} />}</div>;
 }
