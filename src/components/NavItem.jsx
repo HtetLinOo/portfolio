@@ -1,4 +1,5 @@
 import React from "react";
+import DarkMode from "./DarkMode";
 
 export default function NavItem() {
   const navItems = [
@@ -24,14 +25,15 @@ export default function NavItem() {
     },
   ];
   return (
-    <>
-      <ul className="flex items-center justify-start gap-8 font-semibold text-lightsec dark:text-dark">
+    <div className="hidden lg:block">
+      <ul className="flex items-center justify-start gap-8 font-semibold text-lightsec dark:text-dark ">
         {navItems.map((nav, index) => (
           <li key={index}>
             <a href={nav.url}>{nav.name}</a>
           </li>
         ))}
+        <DarkMode />
       </ul>
-    </>
+    </div>
   );
 }

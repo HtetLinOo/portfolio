@@ -10,7 +10,7 @@ export default function HeroText({ url }) {
     <div className="w-full">
       <div className="grid items-center font-bold text-3xl ">
         <div className="txt-block">
-          <h2 className="text-7xl text-light dark:text-dark">
+          <h2 className="text-3xl lg:text-7xl text-light dark:text-dark">
             {/* Hi, I'm&nbsp;<span className="text-light dark:text-darksec">Htet Lin Oo</span> */}
             {text.map((el, i) => (
               <motion.span
@@ -27,7 +27,7 @@ export default function HeroText({ url }) {
             ))}
           </h2>
           <ReactTyped strings={["A passionate Full Stack Web Developer", "A Software Engineer", "A Front End Engineer"]} typeSpeed={40} backSpeed={50} attr="placeholder" loop>
-            <input type="text" className="focus:outline-none w-full py-5 placeholder:text-gray-600 dark:placeholder:text-white dark:bg-slate-900" />
+            <input type="text" className="focus:outline-none w-full py-5 placeholder:text-gray-600 dark:placeholder:text-white dark:bg-slate-900 text-lg lg:text-5xl" />
           </ReactTyped>
           <motion.div
             initial={{ x: -500 }}
