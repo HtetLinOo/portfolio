@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import DarkMode from "./DarkMode";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function NavMobile({ toggle, closeMenu }) {
+  const controls = useAnimation();
   const navItems = [
     {
       name: "About",
@@ -25,34 +26,31 @@ export default function NavMobile({ toggle, closeMenu }) {
       url: "#contact",
     },
   ];
+
+  useEffect(() => {
+    controls.start({
+      width: toggle ? "100%" : 0,
+      height: toggle ? "100vh" : 0,
+      opacity: toggle ? 1 : 0,
+    });
+  }, [toggle, controls]);
+
   return (
-    <div className="nav-mobile">
+    <AnimatePresence>
       {toggle && (
-        <AnimatePresence>
-          <motion.div
-            initial={{ x: 500 }}
-            animate={{ x: 0 }}
-            exit={{ x: 500 }}
-            transition={{
-              duration: 0.5,
-              type: "tween",
-              ease: "easeInOut",
-            }}
-            className="w-full h-screen bg-white dark:bg-slate-900 fixed top-20 left-0"
-          >
-            <ul className="h-screen flex flex-col items-center py-16 text-3xl text-center gap-8 font-semibold text-lightsec dark:text-dark ">
-              {navItems.map((nav, index) => (
-                <li key={index} onClick={closeMenu}>
-                  <a href={nav.url}>{nav.name}</a>
-                </li>
-              ))}
-              <div className="flex justify-center">
-                <DarkMode />
-              </div>
-            </ul>
-          </motion.div>
-        </AnimatePresence>
+        <motion.div className="nav-mobile" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+          <motion.ul className="w-full h-screen bg-white dark:bg-slate-900 fixed top-20 left-0 flex flex-col items-center py-16 text-3xl text-center gap-8 font-semibold text-lightsec dark:text-dark " animate={controls}>
+            {navItems.map((nav, index) => (
+              <motion.li key={index} initial={{ opacity: 0, scale: 0.3, x: -50 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.2, delay: index * 0.1 }} onClick={closeMenu}>
+                <a href={nav.url}>{nav.name}</a>
+              </motion.li>
+            ))}
+            <div className="flex justify-center">
+              <DarkMode />
+            </div>
+          </motion.ul>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   );
 }
