@@ -4,6 +4,8 @@ import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import ExpSection from "./sections/ExpSection";
 import Footer from "./components/Footer";
+import TopButton from "./components/TopButton";
+import SkillsSection from "./sections/SkillsSection";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <HeroSection />
       <AboutSection />
       {/* <ExpSection /> */}
+      <SkillsSection />
+      <TopButton />
       <Footer />
     </>
   );

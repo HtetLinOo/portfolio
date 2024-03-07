@@ -45,9 +45,9 @@ export default function NavMobile({ toggle, closeMenu }) {
                 <a href={nav.url}>{nav.name}</a>
               </motion.li>
             ))}
-            <div className="flex justify-center">
+            <motion.div initial={{ opacity: 0, scale: 0.3, x: -50 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.6 }} className="flex justify-center">
               <DarkMode />
-            </div>
+            </motion.div>
           </motion.ul>
         </motion.div>
       )}
