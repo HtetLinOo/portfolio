@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const skills = [
@@ -79,13 +80,18 @@ export default function Skills() {
       name: "AWS",
     },
   ];
+
+  const itemAnimation = {
+    hidden: { opacity: 0, scale: 0.3, x: -50 },
+    visible: { opacity: 1, scale: 1, x: 0 },
+  };
   return (
     <>
       {skills.map((skill, index) => (
-        <div className="flex flex-col justify-center gap-1 items-center w-32 h-32 shadow-lg rounded-full dark:bg-white" key={index}>
+        <motion.div variants={itemAnimation} initial="hidden" transition={{ duration: 0.1, delay: index * 0.1 }} whileInView="visible" exit="hidden" className="flex flex-col justify-center gap-1 items-center w-32 h-32 shadow-lg rounded-full dark:bg-white" key={index}>
           <img src={skill.src} className="mx-auto w-14" alt={skill.name} />
           <span className="font-bold text-sm text-lightsec dark:text-darksec">{skill.name}</span>
-        </div>
+        </motion.div>
       ))}
     </>
   );

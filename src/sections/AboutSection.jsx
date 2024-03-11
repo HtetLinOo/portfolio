@@ -16,7 +16,7 @@ export default function AboutSection() {
       <span id="about" className="anchor"></span>
       <section className="bg-white dark:bg-slate-900 py-10">
         <div className="container mx-auto">
-          <motion.h2 variants={fadeUpAnimation} initial="hidden" whileInView="visible" exit="hidden" className="text-light dark:text-dark uppercase text-center text-3xl font-black ">
+          <motion.h2 variants={fadeUpAnimation} initial="hidden" whileInView="visible" exit="hidden" className="text-light dark:text-dark uppercase text-center lg:text-3xl text-2xl font-black ">
             About
           </motion.h2>
           <motion.p variants={fadeUpAnimation} initial="hidden" whileInView="visible" exit="hidden" className="max-w-3xl mx-auto text-lg break-words text-lightsec dark:text-dark px-5 py-10">

@@ -10,7 +10,7 @@ export default function Footer() {
           <Logo />
           <Sns />
         </div>
-        <div className="pb-10 flex justify-center items-center text-white dark:text-dark text-md font-bold">&copy;2024&nbsp;Htet Lin Oo</div>
+        <div className="pb-10 flex justify-center items-center text-light dark:text-dark text-md font-bold">&copy;2024&nbsp;Htet Lin Oo</div>
       </div>
     </footer>
   );
