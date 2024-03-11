@@ -82,9 +82,9 @@ export default function Skills() {
   return (
     <>
       {skills.map((skill, index) => (
-        <div className="flex flex-col justify-center gap-1 items-center w-32 h-32 shadow-lg rounded-full dark:bg-opacity-25" key={index}>
+        <div className="flex flex-col justify-center gap-1 items-center w-32 h-32 shadow-lg rounded-full dark:bg-white" key={index}>
           <img src={skill.src} className="mx-auto w-14" alt={skill.name} />
-          <span className="font-bold text-sm text-lightsec dark:text-dark">{skill.name}</span>
+          <span className="font-bold text-sm text-lightsec dark:text-darksec">{skill.name}</span>
         </div>
       ))}
     </>
