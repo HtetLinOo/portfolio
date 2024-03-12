@@ -9,19 +9,37 @@ import SkillsSection from "./sections/SkillsSection";
 import ContactSection from "./sections/ContactSection";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Simulating a loading delay for demonstration purposes
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    // Cleanup function to clear the timeout in case component unmounts before the timeout
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <>
       <ToastContainer autoClose={800} theme="colored" />
-      <Header />
-      <HeroSection />
-      <AboutSection />
-      {/* <ExpSection /> */}
-      <SkillsSection />
-      <ContactSection />
-      <TopButton />
-      <Footer />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          <HeroSection />
+          <AboutSection />
+          {/* <ExpSection /> */}
+          <SkillsSection />
+          <ContactSection />
+          <TopButton />
+          <Footer />
+        </>
+      )}
     </>
   );
 }
