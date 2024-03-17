@@ -45,29 +45,34 @@ header .menu-btn.open .btn-line:nth-child(1) {
 header .menu-btn.open .btn-line:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
-/* HTML: <div class="loader"></div> */
 .loader {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   aspect-ratio: 1;
-  animation: l2-1 2s infinite linear, l2-2 1s infinite steps(1) alternate;
+  display: grid;
 }
-@keyframes l2-1 {
-  0% {
-    transform: perspective(150px) rotateX(0deg);
-  }
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, #2978b5 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
   100% {
-    transform: perspective(150px) rotateX(360deg);
-  }
-}
-@keyframes l2-2 {
-  0% {
-    background: #2978b5;
-  }
-  50% {
-    background: #cdcdff;
+    transform: rotate(0.5turn);
   }
 }

@@ -8,10 +8,6 @@ export default function NavItem() {
       url: "#about",
     },
     {
-      name: "Experiences",
-      url: "#exp",
-    },
-    {
       name: "Projects",
       url: "#projects",
     },

@@ -10,10 +10,6 @@ export default function NavMobile({ toggle, closeMenu }) {
       url: "#about",
     },
     {
-      name: "Experiences",
-      url: "#exp",
-    },
-    {
       name: "Projects",
       url: "#projects",
     },
@@ -45,7 +41,7 @@ export default function NavMobile({ toggle, closeMenu }) {
                 <a href={nav.url}>{nav.name}</a>
               </motion.li>
             ))}
-            <motion.div initial={{ opacity: 0, scale: 0.3, x: -50 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.6 }} className="flex justify-center">
+            <motion.div initial={{ opacity: 0, scale: 0.3, x: -50 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.5 }} className="flex justify-center">
               <DarkMode />
             </motion.div>
           </motion.ul>

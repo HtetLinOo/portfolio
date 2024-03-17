@@ -36,7 +36,7 @@ export default function HeroText({ url }) {
               duration: 1,
             }}
           >
-            <Button url={"/resume"}>Resume</Button>
+            <Button url={"/resume.pdf"}>Resume</Button>
           </motion.div>
         </div>
       </div>
