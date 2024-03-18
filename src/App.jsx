@@ -11,6 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
+import ProjectsSection from "./sections/ProjectsSection";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +34,7 @@ function App() {
           <Header />
           <HeroSection />
           <AboutSection />
-          {/* <ExpSection /> */}
+          <ProjectsSection />
           <SkillsSection />
           <ContactSection />
           <TopButton />

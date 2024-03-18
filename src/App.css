@@ -76,3 +76,39 @@ header .menu-btn.open .btn-line:nth-child(3) {
     transform: rotate(0.5turn);
   }
 }
+
+.slider-block .swiper-nav-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 20px;
+  margin-top: 20px;
+}
+.slider-block .prev {
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider-block .next {
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider-block .slick-prev:before,
+.slider-block .slick-next:before {
+  content: none;
+}
+/* .slider-block .item .txt-box {
+  opacity: 0;
+  visibility: hidden;
+}
+.slider-block .slick-slide.slick-current .item .txt-box,
+.slider-block .swiper-slide-active .item .txt-box {
+  opacity: 1;
+  visibility: visible;
+} */
