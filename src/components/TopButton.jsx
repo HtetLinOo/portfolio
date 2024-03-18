@@ -22,7 +22,7 @@ export default function TopButton() {
   return (
     <>
       {showTopBtn && (
-        <div className="fixed cursor-pointer bottom-28 lg:bottom-32 right-6 lg:right-14 py-4 lg:py-6 px-2 lg:px-3 rounded-lg border-slate-95 bg-light dark:bg-darksec">
+        <div className="fixed z-50 cursor-pointer bottom-28 lg:bottom-32 right-6 lg:right-14 py-4 lg:py-6 px-2 lg:px-3 rounded-lg border-slate-95 bg-light dark:bg-darksec">
           <FaArrowUpLong className="text-white dark:text-white text-lg lg:text-3xl" onClick={handleScrollTop} />
         </div>
       )}

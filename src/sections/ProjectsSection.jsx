@@ -20,7 +20,7 @@ export default function ProjectsSection() {
           <motion.h2 variants={fadeUpAnimation} initial="hidden" whileInView="visible" exit="hidden" className="text-light dark:text-dark uppercase text-center lg:text-3xl text-2xl font-black ">
             Projects
           </motion.h2>
-          <div className="py-10 max-w-5xl mx-auto">
+          <div className="py-10 px-5 max-w-5xl mx-auto">
             <SwipperProjects />
           </div>
         </div>

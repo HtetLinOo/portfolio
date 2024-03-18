@@ -12,10 +12,20 @@ import SwipperButtons from "./SwipperButtons";
 function SwipperProjects() {
   const projectsData = [
     {
+      name: "Legacy",
+      src: "/legacy.png",
+      url: "https://legacy.ne.jp/",
+    },
+    {
       name: "Legacy Cloud",
       src: "/legacy-cloud.jpg",
       url: "https://legacy.ne.jp/legacy-cloud/",
       description: "Website for japanese company, developed with my team while working in Qualy Myanmar. Power by the WordPress.",
+    },
+    {
+      name: "Legacy Recruit",
+      src: "/legacy-recruit.png",
+      url: "https://legacy.ne.jp/recruit/",
     },
     {
       name: "Pari",
@@ -24,16 +34,57 @@ function SwipperProjects() {
       description: "Website for japanese research institude, power by the Movable Type CMS system.",
     },
     {
+      name: "アトリエMAR",
+      src: "/imar.png",
+      url: "https://yukoumesaki.com/",
+      description: "",
+    },
+    {
+      name: "Shinyukai",
+      src: "/shinyukai.png",
+      url: "http://shinyukai-r.or.jp/",
+    },
+    {
       name: "Numazaki",
       src: "/numazaki.jpg",
       url: "https://shinyukai-r.or.jp/numazaki/",
       description: "Website for japanese hospital, developed with my team while working in Qualy Myanmar. Power by the WordPress.",
     },
     {
-      name: "Qualy Recruit Site",
+      name: "Enishi",
+      src: "/enishi.png",
+      url: "https://enishi-inc.co.jp/",
+    },
+    {
+      name: "Shinyukai",
+      src: "/shinyukai.png",
+      url: "http://shinyukai-r.or.jp/",
+    },
+    {
+      name: "Qualy Recruit",
       src: "/recruit.png",
       url: "https://recruit.qualymm.com",
       description: "Qualy Myanmar Recruitment website is a project developed using React for the frontend, Express for the backend, and Firebase for additional functionality. The website aims to streamline the recruitment process for Qualy Myanmar, offering a user-friendly interface for job seekers and efficient management tools for administrators.",
+    },
+    {
+      name: "Qualy Myanmar",
+      src: "/qm.png",
+      url: "https://qualymm.com",
+    },
+    {
+      name: "KKLC",
+      src: "/kklc.png",
+      url: "https://kklc.jp/",
+    },
+    {
+      name: "Medical Corporation Yurikago",
+      src: "/yurikago.png",
+      url: "https://yurikago.or.jp/",
+    },
+    {
+      name: "Skincare",
+      src: "/skincare.png",
+      url: "https://gorilla.clinic/operation/skincare/",
     },
   ];
   return (
@@ -74,14 +125,14 @@ function SwipperProjects() {
             <SwiperSlide key={index}>
               <a href={project.url} target="__blank" className="item font-bold text-sm text-lightsec dark:text-darksec">
                 <div className="shadow-lg bg-white">
-                  <h3 className="text-2xl text-center py-5">{project.name}</h3>
-                  <img className="h-32 w-full object-contain shadow-lg pb-3" src={project.src} alt={project.name} />
-                  <p className="p-3 bg-slate-300 h-52">{project.description}</p>
+                  <img className="h-52 w-full object-contain shadow-lg" src={project.src} alt={project.name} />
+                  {/* <p className="p-3 bg-slate-300 h-52">{project.description}</p> */}
+                  <h3 className="text-xl bg-slate-300 text-center py-5">{project.name}</h3>
                 </div>
               </a>
             </SwiperSlide>
           ))}
-          {/* <SwipperButtons /> */}
+          <SwipperButtons />
         </Swiper>
       </div>
     </div>
