@@ -29,7 +29,7 @@ export const MailForm = () => {
         },
         (error) => {
           toast.error("Message Can't Send");
-          console.log(error.text);
+          console.log(error);
         }
       );
   };
