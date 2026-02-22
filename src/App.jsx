@@ -34,7 +34,7 @@ function App() {
           <Header />
           <HeroSection />
           <AboutSection />
-          <ProjectsSection />
+          {/* <ProjectsSection /> */}
           <SkillsSection />
           <ContactSection />
           <TopButton />
