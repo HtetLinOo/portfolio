@@ -24,6 +24,14 @@ export default function Skills() {
       name: "TailWind CSS",
     },
     {
+      src: "https://img.icons8.com/?size=100&id=13679&format=png&color=000000",
+      name: "Java",
+    },
+    {
+      src: "https://img.icons8.com/?size=100&id=90519&format=png&color=000000",
+      name: "Spring Boot",
+    },
+    {
       src: "https://img.icons8.com/color/2x/javascript.png",
       name: "JavaScript",
     },
@@ -31,10 +39,10 @@ export default function Skills() {
       src: "https://img.icons8.com/color/2x/nodejs.png",
       name: "Node.js",
     },
-    {
-      src: "https://img.icons8.com/color/2x/typescript.png",
-      name: "TypeScript",
-    },
+    // {
+    //   src: "https://img.icons8.com/color/2x/typescript.png",
+    //   name: "TypeScript",
+    // },
     {
       src: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
       name: "React",
