@@ -11,9 +11,9 @@ export default function Sns() {
         <a href="tel:09796954231">
           <FaPhone />
         </a>
-        <a href="https://github.com/htetlinoo" target="_blank">
+        {/* <a href="https://github.com/htetlinoo" target="_blank">
           <FaGithub />
-        </a>
+        </a> */}
         <a href="https://www.linkedin.com/in/htet-lin-oo-a07720178/" target="_blank">
           <FaLinkedin />
         </a>
