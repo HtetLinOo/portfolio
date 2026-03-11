@@ -11,10 +11,10 @@ export default function Skills() {
       src: "https://img.icons8.com/color/2x/css3.png",
       name: "CSS3",
     },
-    {
-      src: "https://img.icons8.com/color/2x/sass.png",
-      name: "SASS",
-    },
+    // {
+    //   src: "https://img.icons8.com/color/2x/sass.png",
+    //   name: "SASS",
+    // },
     {
       src: "https://img.icons8.com/color/2x/bootstrap.png",
       name: "Bootstrap",
@@ -47,14 +47,14 @@ export default function Skills() {
       src: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
       name: "React",
     },
-    {
-      src: "https://img.icons8.com/color/2x/nextjs.png",
-      name: "Next.js",
-    },
-    {
-      src: "https://img.icons8.com/color/2x/express-js.png",
-      name: "Express.js",
-    },
+    // {
+    //   src: "https://img.icons8.com/color/2x/nextjs.png",
+    //   name: "Next.js",
+    // },
+    // {
+    //   src: "https://img.icons8.com/color/2x/express-js.png",
+    //   name: "Express.js",
+    // },
     {
       src: "https://img.icons8.com/dusk/64/000000/php-logo.png",
       name: "PHP",
@@ -67,18 +67,18 @@ export default function Skills() {
       src: "https://img.icons8.com/color/48/000000/mongodb.png",
       name: "MongoDB",
     },
-    {
-      src: "https://img.icons8.com/color/48/000000/firebase.png",
-      name: "Firebase",
-    },
+    // {
+    //   src: "https://img.icons8.com/color/48/000000/firebase.png",
+    //   name: "Firebase",
+    // },
     {
       src: "https://img.icons8.com/color/48/000000/git.png",
       name: "Git",
     },
-    {
-      src: "https://img.icons8.com/color/48/000000/github.png",
-      name: "GitHub",
-    },
+    // {
+    //   src: "https://img.icons8.com/color/48/000000/github.png",
+    //   name: "GitHub",
+    // },
     {
       src: "https://img.icons8.com/color/48/000000/ubuntu.png",
       name: "Ubuntu",
