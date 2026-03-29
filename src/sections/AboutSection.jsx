@@ -20,7 +20,7 @@ export default function AboutSection() {
             About
           </motion.h2>
           <motion.p variants={fadeUpAnimation} initial="hidden" whileInView="visible" exit="hidden" className="max-w-3xl mx-auto text-lg break-words text-lightsec dark:text-dark px-5 py-10">
-            I'm Htet Lin Oo, a passionate Full Stack web developer with a degree from the University of Computer Studies, Pyay. With 2 years of experience in the web development field, I bring my expertise in HTML, CSS, JavaScript (including jQuery), React.js, Java, Spring Boot, Node.js, Express.js, MongoDB, PHP, WordPress, and Cloud Technologies to craft dynamic web applications. As a highly motivated learner and enthusiastic team player, I'm eager to contribute my skills, continuously learn, and collaborate towards achieving success.
+            I'm Htet Lin Oo, a passionate Full Stack web developer with a degree from the University of Computer Studies, Pyay. With 4 years of experience in the web development field, I bring my expertise in HTML, CSS, JavaScript (including jQuery), React.js, Java, Spring Boot, Node.js, Express.js, MongoDB, PHP, WordPress, and Cloud Technologies to craft dynamic web applications. As a highly motivated learner and enthusiastic team player, I'm eager to contribute my skills, continuously learn, and collaborate towards achieving success.
           </motion.p>
         </div>
       </section>
