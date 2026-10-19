@@ -8,12 +8,12 @@ export default function Sns() {
   return (
     <>
       <div className="flex items-center gap-5 text-3xl text-light dark:text-dark cursor-pointer">
-        <a href="tel:09796954231">
+        {/* <a href="tel:09796954231">
           <FaPhone />
-        </a>
-        {/* <a href="https://github.com/htetlinoo" target="_blank">
-          <FaGithub />
         </a> */}
+        <a href="https://github.com/htetlinoo" target="_blank">
+          <FaGithub />
+        </a>
         <a href="https://www.linkedin.com/in/htet-lin-oo-a07720178/" target="_blank">
           <FaLinkedin />
         </a>

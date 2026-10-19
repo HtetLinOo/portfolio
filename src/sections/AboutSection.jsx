@@ -20,7 +20,15 @@ export default function AboutSection() {
             About
           </motion.h2>
           <motion.p variants={fadeUpAnimation} initial="hidden" whileInView="visible" exit="hidden" className="max-w-3xl mx-auto text-lg break-words text-lightsec dark:text-dark px-5 py-10">
-            University of Computer Studies, Pyay を卒業後、Web開発に携わってきました。Java、JavaScript、PHPを中心に、React、TypeScript、Spring Boot、Node.js、MySQLなどを用いたWebシステムの開発・改修・テストを経験しています。チームメンバーと連携しながら、仕様を理解し、使いやすく保守しやすいシステムをつくることを大切にしています。
+            私は、技術の進歩に関心を持ち、IT業界でのキャリアを築いてきました。
+
+大学ではコンピュータサイエンスを専攻し、約3か月間のインターンシップを経験しました。その後、日系企業にて約3年半、ITエンジニアとしてWebシステムの開発・改修・テスト業務に携わってきました。
+
+Java、JavaScript、PHPをはじめ、Spring Boot、React、TypeScript、Node.js、MySQLなどの技術を用いた開発経験があります。また、各種テストや進捗管理のサポートも担当してきました。
+
+チームでのコミュニケーションを大切にし、仕様を正確に理解したうえで、使いやすく保守性の高いシステムを開発することを心がけています。
+
+これまでの経験を活かしながら、新しい技術を積極的に学び、エンジニアとして成長し続けることを目指しています。
           </motion.p>
         </div>
       </section>

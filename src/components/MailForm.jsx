@@ -52,7 +52,7 @@ export const MailForm = () => {
           </label>
           <div className=" text-center">
             <button className="rounded text-xl font-normal text-white bg-light px-5 py-2 dark:bg-darksec" type="submit">
-              Send
+              送信
             </button>
           </div>
         </form>

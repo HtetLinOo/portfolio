@@ -39,10 +39,10 @@ export default function Skills() {
       src: "https://img.icons8.com/color/2x/nodejs.png",
       name: "Node.js",
     },
-    // {
-    //   src: "https://img.icons8.com/color/2x/typescript.png",
-    //   name: "TypeScript",
-    // },
+    {
+      src: "https://img.icons8.com/color/2x/typescript.png",
+      name: "TypeScript",
+    },
     {
       src: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
       name: "React",
@@ -79,14 +79,14 @@ export default function Skills() {
     //   src: "https://img.icons8.com/color/48/000000/github.png",
     //   name: "GitHub",
     // },
-    {
-      src: "https://img.icons8.com/color/48/000000/ubuntu.png",
-      name: "Ubuntu",
-    },
-    {
-      src: "https://img.icons8.com/color/2x/amazon-web-services.png",
-      name: "AWS",
-    },
+    // {
+    //   src: "https://img.icons8.com/color/48/000000/ubuntu.png",
+    //   name: "Ubuntu",
+    // },
+    // {
+    //   src: "https://img.icons8.com/color/2x/amazon-web-services.png",
+    //   name: "AWS",
+    // },
   ];
 
   const itemAnimation = {

@@ -53,9 +53,9 @@ export default function CareerSection() {
           <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="text-light dark:text-dark uppercase text-center lg:text-3xl text-2xl font-black">
             Career
           </motion.h2>
-          <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="text-center text-lightsec dark:text-darksec mt-3">
+          {/* <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="text-center text-lightsec dark:text-darksec mt-3">
             職歴・実務経験
-          </motion.p>
+          </motion.p> */}
 
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="max-w-5xl mx-auto mt-10">
             <div className="rounded-xl border border-slate-200 dark:border-slate-700 p-5 lg:p-7">

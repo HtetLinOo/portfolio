@@ -1,52 +1,78 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ReactTyped } from "react-typed";
+import Button from "./Button";
 import { motion } from "framer-motion";
 
-export default function HeroText() {
-  const [showRole, setShowRole] = useState(false);
-  const [showSummary, setShowSummary] = useState(false);
-  const name = "Htet Lin Oo（テッ・リン・オー）です。";
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowRole(true), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+export default function HeroText({ url }) {
+  const text = "こんにちは,".split("");
+  const text1 = "テッ　リン　オー です。".split("");
 
   return (
     <div className="w-full">
-      <div className="grid items-center font-bold text-3xl">
+      <div className="grid items-center font-bold text-3xl ">
         <div className="txt-block">
-          <h2 className="text-3xl lg:text-7xl text-light dark:text-dark leading-tight">
-            {name.split("").map((character, index) => (
+          <h2 className="text-3xl lg:text-7xl text-light dark:text-dark">
+            {/* Hi, I'm&nbsp;<span className="text-light dark:text-darksec">Htet Lin Oo</span> */}
+            {text.map((el, i) => (
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.25, delay: index / 25 }}
-                key={`${character}-${index}`}
+                transition={{
+                  duration: 0.25,
+                  delay: i / 15,
+                }}
+                key={i}
               >
-                {character}
+                {el}
+              </motion.span>
+            ))}
+            <br />
+            <br />
+
+            {text1.map((el, i) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.25,
+                  delay: i / 15,
+                }}
+                key={i}
+              >
+                {el}
               </motion.span>
             ))}
           </h2>
+          {/* <ReactTyped strings={["A passionate Full Stack Web Developer", "A Software Engineer", "A Front End Engineer"]} typeSpeed={40} backSpeed={50} attr="placeholder" loop>
+            <input type="text" className="focus:outline-none w-full py-5 placeholder:text-gray-600 dark:placeholder:text-white dark:bg-slate-900 text-lg lg:text-5xl" />
+          </ReactTyped> */}
+          <br />
 
-          {showRole && (
-            <ReactTyped
-              strings={["Webアプリケーションエンジニアです。"]}
-              typeSpeed={42}
-              showCursor={false}
-              onComplete={() => setShowSummary(true)}
-              className="block w-full py-3 text-lg lg:text-5xl leading-tight whitespace-normal break-words text-light dark:text-dark"
+          <ReactTyped
+            strings={[
+              "情熱を持ったフルスタックWebエンジニア",
+              "ソフトウェアエンジニア",
+              "フロントエンドエンジニア",
+            ]}
+            typeSpeed={100}
+            backSpeed={90}
+            attr="placeholder"
+            loop
+          >
+            <input
+              type="text"
+              className="focus:outline-none w-full py-5 placeholder:text-gray-600 dark:placeholder:text-white dark:bg-slate-900 text-lg lg:text-5xl"
             />
-          )}
-
-          {showSummary && (
-            <ReactTyped
-              strings={["Java・React・TypeScript・JavaScript・PHPを用いた Webアプリケーション開発に携わっています。"]}
-              typeSpeed={25}
-              showCursor={false}
-              className="block w-full py-2 text-base lg:text-2xl leading-relaxed whitespace-normal break-words font-normal text-lightsec dark:text-darksec"
-            />
-          )}
+          </ReactTyped>
+          <motion.div
+            initial={{ x: -500 }}
+            animate={{ x: 0 }}
+            transition={{
+              duration: 1,
+            }}
+          >
+            {/* <Button url={"/resume.pdf"}>Resume</Button> */}
+          </motion.div>
         </div>
       </div>
     </div>
