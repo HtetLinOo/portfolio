@@ -9,10 +9,10 @@ export default function NavMobile({ toggle, closeMenu }) {
       name: "About",
       url: "#about",
     },
-    // {
-    //   name: "Projects",
-    //   url: "#projects",
-    // },
+    {
+      name: "Career",
+      url: "#career",
+    },
     {
       name: "Skills",
       url: "#skills",

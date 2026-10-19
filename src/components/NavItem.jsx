@@ -7,10 +7,10 @@ export default function NavItem() {
       name: "About",
       url: "#about",
     },
-    // {
-    //   name: "Projects",
-    //   url: "#projects",
-    // },
+    {
+      name: "Career",
+      url: "#career",
+    },
     {
       name: "Skills",
       url: "#skills",

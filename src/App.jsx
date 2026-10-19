@@ -2,16 +2,15 @@ import Header from "./components/Header";
 import "./App.css";
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
-import ExpSection from "./sections/ExpSection";
+import CareerSection from "./sections/CareerSection";
 import Footer from "./components/Footer";
 import TopButton from "./components/TopButton";
 import SkillsSection from "./sections/SkillsSection";
 import ContactSection from "./sections/ContactSection";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
-import ProjectsSection from "./sections/ProjectsSection";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +33,7 @@ function App() {
           <Header />
           <HeroSection />
           <AboutSection />
+          <CareerSection />
           {/* <ProjectsSection /> */}
           <SkillsSection />
           <ContactSection />
