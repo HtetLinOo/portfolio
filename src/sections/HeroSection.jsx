@@ -16,7 +16,7 @@ export default function HeroSection() {
               transition={{
                 duration: 1,
               }}
-              src="/mv_human.png"
+              src={`${import.meta.env.BASE_URL}mv_human.png`}
               alt="human"
             />
           </div>
