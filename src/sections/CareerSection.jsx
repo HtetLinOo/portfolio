@@ -34,9 +34,14 @@ const projects = [
   },
 ];
 
+const viewport = { once: true, amount: 0.12, margin: "0px 0px -8% 0px" };
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 36 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+const cardAnimation = {
+  hidden: { opacity: 0, y: 28 },
+  visible: (index) => ({ opacity: 1, y: 0, transition: { duration: 0.45, delay: index * 0.08, ease: "easeOut" } }),
 };
 
 export default function CareerSection() {
@@ -45,14 +50,14 @@ export default function CareerSection() {
       <span id="career" className="anchor"></span>
       <section className="bg-white dark:bg-slate-900 py-10">
         <div className="container mx-auto px-5">
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-light dark:text-dark uppercase text-center lg:text-3xl text-2xl font-black">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="text-light dark:text-dark uppercase text-center lg:text-3xl text-2xl font-black">
             Career
           </motion.h2>
-          <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center text-lightsec dark:text-darksec mt-3">
+          <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="text-center text-lightsec dark:text-darksec mt-3">
             職歴・実務経験
           </motion.p>
 
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-5xl mx-auto mt-10">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="max-w-5xl mx-auto mt-10">
             <div className="rounded-xl border border-slate-200 dark:border-slate-700 p-5 lg:p-7">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
                 <div>
@@ -72,22 +77,30 @@ export default function CareerSection() {
                 ))}
               </div>
             </div>
-
-            <div className="mt-6 grid gap-4">
-              {projects.map((project) => (
-                <article key={project.title} className="rounded-xl border border-slate-200 dark:border-slate-700 p-5 hover:shadow-sm transition-shadow">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
-                    <p className="text-sm font-bold text-sky-700 dark:text-sky-300 lg:w-36 shrink-0">{project.period}</p>
-                    <div>
-                      <h3 className="text-lg font-bold text-light dark:text-dark">{project.title}</h3>
-                      <p className="text-lightsec dark:text-darksec mt-2 leading-7">{project.summary}</p>
-                      <p className="text-sm text-lightsec dark:text-darksec mt-3"><span className="font-bold">使用技術：</span>{project.stack}</p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
           </motion.div>
+
+          <div className="max-w-5xl mx-auto mt-6 grid gap-4">
+            {projects.map((project, index) => (
+              <motion.article
+                key={project.title}
+                custom={index}
+                variants={cardAnimation}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewport}
+                className="rounded-xl border border-slate-200 dark:border-slate-700 p-5 hover:shadow-sm transition-shadow"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
+                  <p className="text-sm font-bold text-sky-700 dark:text-sky-300 lg:w-36 shrink-0">{project.period}</p>
+                  <div>
+                    <h3 className="text-lg font-bold text-light dark:text-dark">{project.title}</h3>
+                    <p className="text-lightsec dark:text-darksec mt-2 leading-7">{project.summary}</p>
+                    <p className="text-sm text-lightsec dark:text-darksec mt-3"><span className="font-bold">使用技術：</span>{project.stack}</p>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
     </>

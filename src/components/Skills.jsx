@@ -91,12 +91,13 @@ export default function Skills() {
 
   const itemAnimation = {
     hidden: { opacity: 0, scale: 0.3, x: -50 },
-    visible: { opacity: 1, scale: 1, x: 0 },
+    visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.45, ease: "easeOut" } },
   };
+  const viewport = { once: true, amount: 0.2, margin: "0px 0px -8% 0px" };
   return (
     <>
       {skills.map((skill, index) => (
-        <motion.div variants={itemAnimation} initial="hidden" transition={{ duration: 0.1, delay: index * 0.1 }} whileInView="visible" exit="hidden" className="flex flex-col justify-center gap-1 items-center w-32 h-32 shadow-lg rounded-full dark:bg-white" key={index}>
+        <motion.div variants={itemAnimation} initial="hidden" transition={{ delay: index * 0.08 }} whileInView="visible" viewport={viewport} className="flex flex-col justify-center gap-1 items-center w-32 h-32 shadow-lg rounded-full dark:bg-white" key={index}>
           <img src={skill.src} className="mx-auto w-14" alt={skill.name} />
           <span className="font-bold text-sm text-lightsec dark:text-darksec">{skill.name}</span>
         </motion.div>
