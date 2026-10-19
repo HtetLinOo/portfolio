@@ -52,7 +52,7 @@ export default function HeroText({ url }) {
             strings={[
               "情熱を持ったフルスタックWebエンジニア",
               "ソフトウェアエンジニア",
-              "フロントエンドエンジニア",
+              "WEBエンジニア",
             ]}
             typeSpeed={100}
             backSpeed={90}
